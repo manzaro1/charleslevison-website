@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charles Levison | New Artwork</title>
+  <style>
+    body { margin: 0; padding: 0; font-family: 'Georgia', serif; background: #f5f3f0; }
+    .container { max-width: 600px; margin: 0 auto; background: #fff; }
+    .header { background: linear-gradient(135deg, #2c3e50, #1a252f); padding: 50px 20px; text-align: center; border-bottom: 4px solid #d4af37; }
+    .logo { color: #d4af37; font-size: 28px; letter-spacing: 4px; text-transform: uppercase; margin: 0; font-weight: 300; }
+    .tagline { color: #fff; font-size: 13px; letter-spacing: 2px; margin-top: 10px; font-style: italic; }
+    .artist-tag { color: #d4af37; font-size: 11px; text-transform: uppercase; letter-spacing: 3px; margin-top: 8px; }
+    .content { padding: 45px 30px; }
+    .greeting { color: #2c3e50; font-size: 15px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-weight: bold; }
+    .welcome { font-style: italic; color: #666; margin-bottom: 30px; line-height: 1.6; }
+    .headline { color: #1a252f; font-size: 26px; line-height: 1.3; margin: 0 0 15px 0; font-weight: normal; }
+    .location { color: #8b7355; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; }
+    .artwork-container { margin: 35px 0; border: 1px solid #d4af37; }
+    .artwork-image { width: 100%; height: auto; display: block; }
+    .artwork-caption { background: #f8f8f6; padding: 20px; border-top: 3px solid #d4af37; }
+    .artwork-title { color: #1a252f; font-size: 18px; margin-bottom: 5px; }
+    .artwork-details { color: #666; font-size: 13px; font-style: italic; }
+    .story { color: #444; line-height: 1.7; margin: 30px 0; padding: 25px; background: #f8f8f6; border-left: 3px solid #d4af37; }
+    .cta-container { text-align: center; margin: 35px 0; }
+    .cta-button { display: inline-block; background: #d4af37; color: #1a252f; padding: 16px 45px; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
+    .cta-secondary { display: inline-block; color: #2c3e50; text-decoration: underline; margin-top: 15px; font-size: 13px; }
+    .gallery-info { text-align: center; padding: 25px; background: #f5f3f0; margin: 30px 0; }
+    .gallery-info h3 { color: #1a252f; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+    .gallery-info p { color: #666; font-size: 13px; line-height: 1.6; margin: 5px 0; }
+    .footer { background: #1a252f; color: #fff; padding: 40px 30px; text-align: center; }
+    .footer h4 { color: #d4af37; margin-bottom: 10px; font-weight: normal; }
+    .footer p { font-size: 13px; line-height: 1.6; margin: 5px 0; color: #ccc; }
+    .social { margin: 20px 0; }
+    .social a { color: #d4af37; text-decoration: none; margin: 0 12px; font-size: 13px; }
+    .unsubscribe { color: #666; font-size: 11px; margin-top: 25px; padding-top: 20px; border-top: 1px solid #333; }
+    @media screen and (max-width: 600px) {
+      .content { padding: 30px 20px; }
+      .headline { font-size: 22px; }
+      .header { padding: 35px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="logo">Charles Levison</h1>
+      <p class="tagline">Impressionistic Art of Malawi</p>
+      <p class="artist-tag">Fine Artist • Filmmaker • Educator</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <p class="greeting">Dear Collector,</p>
+      
+      <p class="welcome">Welcome to my private collector's list. You are among the first to see my new works before they are shared publicly.</p>
+      
+      <h2 class="headline">New Piece Available</h2>
+      <p class="location">📍 Wildlife Center, Lilongwe</p>
+      
+      <!-- Artwork -->
+      <div class="artwork-container">
+        <img src="{{artwork_image}}" alt="New Painting by Charles Levison" class="artwork-image">
+        <div class="artwork-caption">
+          <div class="artwork-title">{{painting_title}}</div>
+          <div class="artwork-details">Oil on Canvas • {{dimensions}} • 2025</div>
+        </div>
+      </div>
+      
+      <div class="story">
+        <p>"<em>{{artist_statement}}</em>"</p>
+        <p style="margin-top: 15px; font-size: 13px; color: #888;">— Charles Levison</p>
+      </div>
+      
+      <div class="cta-container">
+        <a href="mailto:charleslevison@gmail.com?subject=Inquiry: New Painting" class="cta-button">Inquire About This Piece</a>
+        <br>
+        <br>
+        <a href="tel:+265" class="cta-secondary">Or call to arrange a viewing</a>
+      </div>
+      
+      <div class="gallery-info">
+        <h3>Where to See My Work</h3>
+        <p><strong>Lilongwe:</strong> Wildlife Center</p>
+        <p><strong>Blantyre:</strong> Lacaverna Art Gallery, Jacaranda Gallery</p>
+        <p>Private viewings available by appointment</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <h4>Charles Levison Art</h4>
+      <p>31 | Lilongwe, Malawi</p>
+      <p>Grew up in Mangochi, along the shores of Lake Malawi</p>
+      <p>Inspired by water, daily life, and the rhythm of nature</p>
+      
+      <div class="social">
+        <a href="https://instagram.com/charleslevison">Instagram</a> • 
+        <a href="https://malawiplus.com/charles-levison/">Press</a>
+      </div>
+      
+      <p class="unsubscribe">
+        You're on my private collector's list.<br>
+        <a href="#" style="color: #666;">Unsubscribe</a> • 
+        <a href="#" style="color: #666;">View Online</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

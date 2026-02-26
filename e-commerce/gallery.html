@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Charles Levison</title>
+    <meta name="description" content="Browse available artworks and paintings by Charles Levison. Original oil paintings from Malawi.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Charles Levison</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link cart-link" id="cartToggle">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Gallery</h1>
+            <p class="page-subtitle">Original oil paintings available for your collection</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section">
+        <div class="container">
+            <!-- Filters -->
+            <div class="filters-bar">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Works</button>
+                    <button class="filter-btn" data-filter="available">Available</button>
+                    <button class="filter-btn" data-filter="sold">Sold</button>
+                </div>
+                <div class="filter-controls">
+                    <select class="filter-select" id="themeFilter">
+                        <option value="">All Themes</option>
+                        <option value="water">Water Scenes</option>
+                        <option value="market">Markets</option>
+                        <option value="landscape">Landscapes</option>
+                        <option value="people">People</option>
+                        <option value="abstract">Abstract</option>
+                    </select>
+                    <select class="filter-select" id="sizeFilter">
+                        <option value="">All Sizes</option>
+                        <option value="small">Small (Under 40cm)</option>
+                        <option value="medium">Medium (40-80cm)</option>
+                        <option value="large">Large (80cm+)</option>
+                    </select>
+                    <select class="filter-select" id="priceFilter">
+                        <option value="">All Prices</option>
+                        <option value="0-50000">Under MWK 50,000</option>
+                        <option value="50000-150000">MWK 50k - 150k</option>
+                        <option value="150000-300000">MWK 150k - 300k</option>
+                        <option value="300000+">MWK 300k+</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Artworks Grid -->
+            <div class="artworks-grid full-gallery" id="galleryGrid">
+                <!-- Artworks loaded via JavaScript -->
+            </div>
+
+            <!-- No Results -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <p>No artworks match your filters.</p>
+                <button class="btn btn-secondary" id="clearFilters">Clear Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artwork Modal -->
+    <div class="artwork-modal" id="artworkModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <!-- Placeholder: Replace with high-res artwork image -->
+                    <div class="image-placeholder modal-image-placeholder" id="modalImagePlaceholder">
+                        <span>Artwork Image</span>
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                    <p class="modal-meta" id="modalMeta"></p>
+                    <div class="modal-specs">
+                        <div class="spec">
+                            <span class="spec-label">Medium:</span>
+                            <span class="spec-value" id="modalMedium"></span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Dimensions:</span>
+                            <span class="spec-value" id="modalDimensions"></span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Year:</span>
+                            <span class="spec-value" id="modalYear"></span>
+                        </div>
+                    </div>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="modal-status" id="modalStatus"></div>
+                    <div class="modal-price-section">
+                        <span class="modal-price" id="modalPrice"></span>
+                        <div class="modal-actions" id="modalActions">
+                            <button class="btn btn-primary" id="inquireBtn">Inquire to Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Inquiry</h3>
+                <button class="cart-close" id="cartClose">&times;</button>
+            </div>
+            <div class="cart-body" id="cartBody">
+                <p class="cart-empty">Your inquiry list is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <button class="btn btn-primary btn-full" id="checkoutBtn">Send Inquiry</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Charles Levison</h3>
+                    <p class="footer-tagline">Visual Artist & Filmmaker</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:charleslevison@gmail.com">Email</a></li>
+                        <li><a href="https://instagram.com/charleslevison" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Charles Levison. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

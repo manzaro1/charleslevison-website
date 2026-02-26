@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Levison | Visual Artist - Malawi</title>
+    <meta name="description" content="Charles Levison - Impressionistic Malawian fine art. Oil paintings capturing the soul of Lake Malawi and everyday life.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Charles Levison</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="gallery.html" class="nav-link cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <!-- Placeholder: Replace with high-res artist studio or featured artwork image -->
+            <div class="hero-image-placeholder">
+                <span>Featured Artwork Background</span>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Capturing the Soul of Malawi</h1>
+            <p class="hero-subtitle">Impressionistic oil paintings celebrating the beauty of Lake Malawi and everyday life</p>
+            <p class="hero-statement">"My work is a love letter to the landscapes and people that shaped me. From the shores of Mangochi to the bustling markets of Blantyre, each canvas tells a story of home."</p>
+            <div class="hero-cta">
+                <a href="gallery.html" class="btn btn-primary">View Collection</a>
+                <a href="about.html" class="btn btn-secondary">My Story</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Featured Works -->
+    <section class="section featured-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Works</h2>
+                <p class="section-subtitle">Available paintings ready for your collection</p>
+            </div>
+            <div class="artworks-grid" id="featuredGrid">
+                <!-- Artworks will be loaded by JavaScript -->
+            </div>
+            <div class="text-center mt-4">
+                <a href="gallery.html" class="btn btn-outline">View All Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artist Bio Preview -->
+    <section class="section bio-section">
+        <div class="container">
+            <div class="bio-grid">
+                <div class="bio-image">
+                    <!-- Placeholder: Replace with artist portrait -->
+                    <div class="image-placeholder artist-portrait-placeholder">
+                        <span>Artist Portrait</span>
+                    </div>
+                </div>
+                <div class="bio-content">
+                    <h2 class="section-title">The Artist</h2>
+                    <p class="bio-text">Born and raised along the shores of Lake Malawi in Mangochi, Charles Levison brings a unique perspective to contemporary African art. At 31, he balances his practice between teaching, filmmaking, and painting.</p>
+                    <p class="bio-text">His impressionistic style captures the interplay of light on water, the vibrant colors of local markets, and the resilience of Malawian communities.</p>
+                    <div class="bio-stats">
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Years Painting</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Works Sold</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Gallery Shows</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary">Full Biography</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title text-center">Collector Stories</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Charles's painting of the Jacaranda Market brings such warmth to our home. His ability to capture light is extraordinary.</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Sarah M.</span>
+                        <span class="author-location">Boston, USA</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">I commissioned a piece inspired by my grandmother's village. Charles delivered something that exceeded all expectations.</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Dr. James K.</span>
+                        <span class="author-location">London, UK</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">The Fishermen piece is the centerpiece of our collection. Every guest asks about it. Truly special work.</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Maria T.</span>
+                        <span class="author-location">Johannesburg, SA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Affiliations -->
+    <section class="section galleries-section">
+        <div class="container">
+            <h2 class="section-title text-center">Represented By</h2>
+            <div class="galleries-grid">
+                <div class="gallery-card">
+                    <h3>Lacaverna Art Gallery</h3>
+                    <p>Blantyre, Malawi</p>
+                </div>
+                <div class="gallery-card">
+                    <h3>Jacaranda Gallery</h3>
+                    <p>Blantyre, Malawi</p>
+                </div>
+                <div class="gallery-card">
+                    <h3>Wildlife Center Gallery</h3>
+                    <p>Lilongwe, Malawi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="section-title">Join the Collector's Circle</h2>
+                <p class="newsletter-text">Be the first to see new works, exhibition announcements, and behind-the-scenes glimpses into the studio.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-row">
+                        <input type="text" name="firstName" placeholder="First Name" required class="form-input">
+                        <input type="email" name="email" placeholder="Email Address" required class="form-input">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <p class="form-note">No spam. Unsubscribe anytime. Your privacy is respected.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Charles Levison</h3>
+                    <p class="footer-tagline">Visual Artist & Filmmaker</p>
+                    <p class="footer-location">Lilongwe, Malawi</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:charleslevison@gmail.com">Email</a></li>
+                        <li><a href="https://instagram.com/charleslevison" target="_blank">Instagram</a></li>
+                        <li><a href="contact.html#private-viewing">Request Private Viewing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Charles Levison. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Inquiry</h3>
+                <button class="cart-close" id="cartClose">&times;</button>
+            </div>
+            <div class="cart-body" id="cartBody">
+                <p class="cart-empty">Your inquiry list is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <button class="btn btn-primary btn-full" id="checkoutBtn">Send Inquiry</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

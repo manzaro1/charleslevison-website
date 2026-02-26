@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Charles Levison's Collector's List</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #1a252f 0%, #2c3e50 50%, #1a252f 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .container { max-width: 600px; margin: 0 auto; }
+    .card {
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    }
+    .hero {
+      background: linear-gradient(135deg, #2c3e50, #1a252f);
+      padding: 60px 40px;
+      text-align: center;
+      border-bottom: 4px solid #d4af37;
+    }
+    .logo { 
+      color: #d4af37; 
+      font-size: 38px; 
+      letter-spacing: 5px; 
+      text-transform: uppercase; 
+      margin-bottom: 10px;
+      font-weight: 300;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .subtitle { 
+      color: #fff; 
+      font-size: 15px; 
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .artist-line {
+      color: #888;
+      font-size: 13px;
+      margin-top: 15px;
+      font-style: italic;
+    }
+    .content { padding: 50px 40px; text-align: center; }
+    .headline {
+      font-size: 26px;
+      color: #1a252f;
+      margin-bottom: 15px;
+      font-weight: normal;
+    }
+    .description {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+    .artist-bio {
+      background: #f8f8f6;
+      padding: 25px;
+      margin: 30px 0;
+      text-align: left;
+      border-left: 3px solid #d4af37;
+    }
+    .artist-bio p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.7;
+      font-style: italic;
+    }
+    .artist-bio .name {
+      color: #1a252f;
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: 15px;
+      font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .galleries {
+      margin: 30px 0;
+      padding: 25px 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+    .galleries h3 {
+      color: #1a252f;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    .galleries p {
+      color: #888;
+      font-size: 13px;
+      margin: 5px 0;
+    }
+    .galleries strong { color: #444; }
+    .benefits {
+      text-align: left;
+      margin: 30px 0;
+      padding: 25px;
+      background: linear-gradient(135deg, #f8f8f6, #fff);
+      border: 1px solid #eee;
+      border-radius: 4px;
+    }
+    .benefits h3 {
+      color: #1a252f;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .benefits li {
+      list-style: none;
+      padding: 12px 0 12px 35px;
+      position: relative;
+      color: #555;
+      font-size: 14px;
+      border-bottom: 1px dashed #eee;
+    }
+    .benefits li:last-child { border-bottom: none; }
+    .benefits li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .form-group { margin: 25px 0; }
+    input[type="email"] {
+      width: 100%;
+      padding: 18px 20px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+    input[type="email"]:focus {
+      outline: none;
+      border-color: #d4af37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(135deg, #d4af37, #e8c84d);
+      color: #1a252f;
+      border: none;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    }
+    .trust {
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 1px solid #eee;
+      font-size: 12px;
+      color: #888;
+    }
+    .trust-icon { margin-right: 5px; }
+    @media screen and (max-width: 600px) {
+      .hero { padding: 40px 20px; }
+      .content { padding: 30px 20px; }
+      .headline { font-size: 22px; }
+      .logo { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="hero">
+        <h1 class="logo">Charles Levison</h1>
+        <p class="subtitle">Visual Artist | Malawi</p>
+        <p class="artist-line">"I paint water scenes because I grew up along Lake Malawi"</p>
+      </div>
+      
+      <div class="content">
+        <h2 class="headline">Join the Collector's List</h2>
+        
+        <p class="description">
+          Be among the first to see new original paintings before they go public. 
+          Members get exclusive access to works fresh from the easel.
+        </p>
+        
+        <div class="artist-bio">
+          <p>
+            I am an impressionistic Malawian fine artist based in Lilongwe. 
+            With over 10 years of experience as an artist, filmmaker, and educator, 
+            my work captures the essence of daily life in Malawi — from markets under jacaranda trees 
+            to fishermen along the shores of Lake Malawi.
+          </p>
+          <p class="name">— Charles Levison, 31</p>
+        </div>
+        
+        <div class="galleries">
+          <h3>Find My Work At</h3>
+          <p><strong>Lilongwe:</strong> Wildlife Center</p>
+          <p><strong>Blantyre:</strong> Lacaverna Art Gallery • Jacaranda Gallery</p>
+          <p>Private viewings available by appointment</p>
+        </div>
+        
+        <ul class="benefits">
+          <h3>Collector Benefits</h3>
+          <li>First access to new paintings (before public release)</li>
+          <li>Twice-weekly updates on available works</li>
+          <li>Direct pricing and dimensions via email</li>
+          <li>Invitations to exhibitions and events</li>
+          <li>Option to view pieces before purchasing</li>
+          <li>No obligation — unsubscribe anytime</li>
+        </ul>
+        
+        <form action="#" method="POST">
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Enter your email address" required>
+          </div>
+          
+          <button type="submit" class="submit-btn">Join the Collector's List</button>
+        </form>
+        
+        <p class="trust">
+          <span class="trust-icon">🔒</span>Your email is safe. No spam, unsubscribe anytime.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

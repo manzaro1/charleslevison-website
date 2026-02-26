@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Charles Levison</title>
+    <meta name="description" content="Get in touch with Charles Levison. Inquiries about artwork, commissions, or private viewings in Malawi.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Charles Levison</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Get in Touch</h1>
+            <p class="page-subtitle">I'd love to hear from you. Let's start a conversation.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:charleslevison@gmail.com">charleslevison@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📸</div>
+                        <div class="contact-details">
+                            <h3>Instagram</h3>
+                            <a href="https://instagram.com/charleslevison" target="_blank">@charleslevison</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Studio</h3>
+                            <p>Lilongwe, Malawi</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-note">
+                        <p><strong>Note:</strong> For artwork inquiries, please visit the Gallery page and use the "Inquire to Purchase" button on specific pieces.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required class="form-input">
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="purchase">Purchase Inquiry</option>
+                                <option value="commission">Commission Request</option>
+                                <option value="viewing">Private Viewing Request</option>
+                                <option value="press">Press/Media Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" rows="5" required class="form-input"></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter">
+                                <span>Subscribe to my newsletter for updates on new works and exhibitions</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Viewing Section -->
+    <section class="section private-viewing-section" id="private-viewing">
+        <div class="container">
+            <h2 class="section-title text-center">Request a Private Viewing</h2>
+            <p class="text-center mb-4">See the artworks in person. I offer private viewings at my studio in Lilongwe or can arrange viewings at partner galleries.</p>
+            
+            <div class="viewing-options">
+                <div class="viewing-card">
+                    <div class="viewing-icon">🏠</div>
+                    <h3>Studio Visit</h3>
+                    <p>Visit my working studio in Lilongwe to see available works and works in progress.</p>
+                    <span class="viewing-location">Lilongwe, Malawi</span>
+                </div>
+
+                <div class="viewing-card">
+                    <div class="viewing-icon">🏛️</div>
+                    <h3>Gallery Viewing</h3>
+                    <p>Schedule a viewing at one of my partner galleries in Blantyre or Lilongwe.</p>
+                    <span class="viewing-location">Blantyre / Lilongwe</span>
+                </div>
+
+                <div class="viewing-card">
+                    <div class="viewing-icon">💻</div>
+                    <h3>Virtual Consultation</h3>
+                    <p>Can't visit in person? I offer video consultations to discuss works and answer questions.</p>
+                    <span class="viewing-location">Anywhere</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Locations Map -->
+    <section class="section locations-section">
+        <div class="container">
+            <h2 class="section-title text-center">Gallery Locations</h2>
+            
+            <div class="locations-grid">
+                <div class="location-card">
+                    <!-- Placeholder: Replace with map image -->
+                    <div class="location-map-placeholder">
+                        <span>Map: Lacaverna Art Gallery</span>
+                    </div>
+                    <h3>Lacaverna Art Gallery</h3>
+                    <address>
+                        Blantyre, Malawi<br>
+                        <a href="#" target="_blank">Get Directions</a>
+                    </address>
+                </div>
+
+                <div class="location-card">
+                    <!-- Placeholder: Replace with map image -->
+                    <div class="location-map-placeholder">
+                        <span>Map: Jacaranda Gallery</span>
+                    </div>
+                    <h3>Jacaranda Gallery</h3>
+                    <address>
+                        Blantyre, Malawi<br>
+                        <a href="#" target="_blank">Get Directions</a>
+                    </address>
+                </div>
+
+                <div class="location-card">
+                    <!-- Placeholder: Replace with map image -->
+                    <div class="location-map-placeholder">
+                        <span>Map: Wildlife Center</span>
+                    </div>
+                    <h3>Wildlife Center Gallery</h3>
+                    <address>
+                        Lilongwe, Malawi<br>
+                        <a href="#" target="_blank">Get Directions</a>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <h2 class="section-title text-center">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do you ship internationally?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, I work with professional art shippers to deliver works safely worldwide. Shipping costs vary by destination and will be quoted before purchase confirmation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What payment methods do you accept?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I accept bank transfers, mobile money (Airtel Money, TNM Mpamba), and can arrange payment via PayPal or Stripe for international collectors.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How long does a commission take?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Commission timelines vary based on size and complexity, typically 4-8 weeks. I provide regular updates and share progress photos throughout the process.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I see the artwork in person before purchasing?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! I encourage private viewings. You're welcome to visit my studio in Lilongwe or view works at partner galleries in Blantyre. Virtual consultations are also available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Charles Levison</h3>
+                    <p class="footer-tagline">Visual Artist & Filmmaker</p>
+                    <p class="footer-location">Lilongwe, Malawi</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:charleslevison@gmail.com">Email</a></li>
+                        <li><a href="https://instagram.com/charleslevison" target="_blank">Instagram</a></li>
+                        <li><a href="contact.html#private-viewing">Request Private Viewing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Charles Levison. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
