@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -75,7 +76,7 @@
 
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
                         <div class="form-group">
                             <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" required class="form-input">
@@ -280,3 +281,38 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+    <script>
+        // Handle Contact Form
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const name = form.name.value;
+            const email = form.email.value;
+            const subject = form.subject.value;
+            const message = form.message.value;
+            
+            Swal.fire({
+                title: 'Sending...',
+                text: 'Preparing your message',
+                allowOutsideClick: false,
+                showConfirmButton: false,
+                willOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+            
+            // Send via email
+            const mailtoLink = 'mailto:charleslevison@gmail.com?subject=' + encodeURIComponent(subject) + '&body=Name: ' + encodeURIComponent(name) + '%0AEmail: ' + encodeURIComponent(email) + '%0A%0A' + encodeURIComponent(message);
+            
+            Swal.fire({
+                title: 'Ready to Send!',
+                html: 'Your email app will open.<br>Click Send to complete.',
+                icon: 'info',
+                confirmButtonColor: '#d4af37',
+                confirmButtonText: 'Open Email'
+            }).then(() => {
+                window.location.href = mailtoLink;
+            });
+            

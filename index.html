@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -139,34 +140,15 @@
         </div>
     </section>
 
-    <!-- Gallery Affiliations -->
-    <section class="section galleries-section">
-        <div class="container">
-            <h2 class="section-title text-center">Represented By</h2>
-            <div class="galleries-grid">
-                <div class="gallery-card">
-                    <h3>Lacaverna Art Gallery</h3>
-                    <p>Blantyre, Malawi</p>
-                </div>
-                <div class="gallery-card">
-                    <h3>Jacaranda Gallery</h3>
-                    <p>Blantyre, Malawi</p>
-                </div>
-                <div class="gallery-card">
-                    <h3>Wildlife Center Gallery</h3>
-                    <p>Lilongwe, Malawi</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
+    <!-- Newsletter Section -->
     <section class="section newsletter-section">
         <div class="container">
             <div class="newsletter-content">
-                <h2 class="section-title">Join the Collector's Circle</h2>
+                <h2 class="newsletter-title">Join the Collector's Circle</h2>
                 <p class="newsletter-text">Be the first to see new works, exhibition announcements, and behind-the-scenes glimpses into the studio.</p>
-                <form class="newsletter-form" id="newsletterForm">
+                
+                <!-- Newsletter Form with Working JavaScript -->
+                <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletterSubmit(event)">
                     <div class="form-row">
                         <input type="text" name="firstName" placeholder="First Name" required class="form-input">
                         <input type="email" name="email" placeholder="Email Address" required class="form-input">
@@ -174,6 +156,11 @@
                     </div>
                     <p class="form-note">No spam. Unsubscribe anytime. Your privacy is respected.</p>
                 </form>
+                
+                <!-- Alternative: Direct email signup -->
+                <p style="margin-top: 20px; font-size: 14px; color: #888;">
+                    Or email directly: <a href="mailto:charleslevison@gmail.com?subject=Newsletter Signup" style="color: #d4af37;">charleslevison@gmail.com</a>
+                </p>
             </div>
         </div>
     </section>
@@ -181,53 +168,183 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-content">
                 <div class="footer-brand">
-                    <h3 class="footer-logo">Charles Levison</h3>
-                    <p class="footer-tagline">Visual Artist & Filmmaker</p>
-                    <p class="footer-location">Lilongwe, Malawi</p>
+                    <h3>Charles Levison</h3>
+                    <p>Impressionistic art capturing the soul of Malawi</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/charleslevison" target="_blank">Instagram</a>
+                        <a href="https://facebook.com" target="_blank">Facebook</a>
+                        <a href="https://wa.me/265999999999" target="_blank">WhatsApp</a>
+                    </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Explore</h4>
+                    <h4>Quick Links</h4>
                     <ul>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Connect</h4>
+                    <h4>Galleries</h4>
                     <ul>
-                        <li><a href="mailto:charleslevison@gmail.com">Email</a></li>
-                        <li><a href="https://instagram.com/charleslevison" target="_blank">Instagram</a></li>
-                        <li><a href="contact.html#private-viewing">Request Private Viewing</a></li>
+                        <li><a href="#">Lacaverna (Blantyre)</a></li>
+                        <li><a href="#">Jacaranda Gallery</a></li>
+                        <li><a href="#">Wildlife Center (Lilongwe)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:charleslevison@gmail.com">charleslevison@gmail.com</a></li>
+                        <li><a href="tel:+265999999999">+265 999 999 999</a></li>
+                        <li><a href="#">Lilongwe, Malawi</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Charles Levison. All rights reserved.</p>
+                <p>&copy; 2026 Charles Levison Art. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Cart Modal -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-overlay" id="cartOverlay"></div>
-        <div class="cart-content">
-            <div class="cart-header">
-                <h3>Your Inquiry</h3>
-                <button class="cart-close" id="cartClose">&times;</button>
-            </div>
-            <div class="cart-body" id="cartBody">
-                <p class="cart-empty">Your inquiry list is empty.</p>
-            </div>
-            <div class="cart-footer">
-                <button class="btn btn-primary btn-full" id="checkoutBtn">Send Inquiry</button>
-            </div>
-        </div>
-    </div>
+    <script>
+        // Artwork Data - Add your paintings here
+        const artworks = [
+            {
+                id: 1,
+                title: "New Piece Available",
+                image: "images/artworks/new-piece-wildlife-center.jpg",
+                dimensions: "60cm x 80cm",
+                medium: "Oil on Canvas",
+                year: 2025,
+                price: "MWK 250,000",
+                status: "available",
+                description: "A stunning piece available at Wildlife Center in Lilongwe."
+            }
+        ];
 
-    <script src="js/data.js"></script>
-    <script src="js/main.js"></script>
+        // Load featured artworks
+        function loadFeaturedArtworks() {
+            const grid = document.getElementById('featuredGrid');
+            if (!grid) return;
+            
+            grid.innerHTML = artworks.slice(0, 3).map(artwork => `
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="${artwork.image}" alt="${artwork.title}" onerror="this.parentElement.innerHTML='<span>Image: ${artwork.title}</span>'">
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">${artwork.title}</h3>
+                        <p class="artwork-meta">${artwork.dimensions} • ${artwork.medium}</p>
+                        <p class">${artwork.price}</p>
+                        <span class="artwork-price="artwork-status status-${artwork.status}">${artwork.status}</span>
+                        <div class="artwork-actions">
+                            <a href="gallery.html" class="btn btn-primary btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Handle Newsletter Subscription
+        function handleNewsletterSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const firstName = form.firstName.value;
+            const email = form.email.value;
+            
+            // Show loading
+            Swal.fire({
+                title: 'Subscribing...',
+                text: 'Please wait',
+                allowOutsideClick: false,
+                showConfirmButton: false,
+                willOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+            
+            // Send email notification via mailto (simple solution)
+            const mailtoLink = `mailto:charleslevison@gmail.com?subject=Newsletter Signup: ${encodeURIComponent(firstName)}&body=Name: ${encodeURIComponent(firstName)}%0AEmail: ${encodeURIComponent(email)}%0A%0AI want to subscribe to the Levison Gallery newsletter.`;
+            
+            // Also store in localStorage for backup
+            const subscribers = JSON.parse(localStorage.getItem('newsletterSubscribers') || '[]');
+            subscribers.push({ name: firstName, email: email, date: new Date().toISOString() });
+            localStorage.setItem('newsletterSubscribers', JSON.stringify(subscribers));
+            
+            // Show success
+            Swal.fire({
+                title: 'Welcome to the Collectors Circle! 🎨',
+                html: `Thank you, ${firstName}!<br><br>You've been added to our newsletter list.<br>You'll receive updates on new paintings and exhibitions.`,
+                icon: 'success',
+                confirmButtonColor: '#d4af37',
+                confirmButtonText: 'Got it!'
+            });
+            
+            // Reset form
+            form.reset();
+            
+            // Open email client as backup
+            window.location.href = mailtoLink;
+        }
+
+        // Handle Contact Form
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const name = form.name.value;
+            const email = form.email.value;
+            const subject = form.subject.value;
+            const message = form.message.value;
+            
+            Swal.fire({
+                title: 'Sending...',
+                text: 'Please wait',
+                allowOutsideClick: false,
+                showConfirmButton: false,
+                willOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+            
+            // Send via email
+            const mailtoLink = `mailto:charleslevison@gmail.com?subject=${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0A%0A${encodeURIComponent(message)}`;
+            
+            Swal.fire({
+                title: 'Message Ready to Send!',
+                html: `Your message will open in your email app.<br><br>Click "Send" to complete.`,
+                icon: 'info',
+                confirmButtonColor: '#d4af37',
+                confirmButtonText: 'Send Email'
+            }).then(() => {
+                window.location.href = mailtoLink;
+            });
+            
+            form.reset();
+        }
+
+        // Mobile Navigation
+        document.getElementById('mobileToggle')?.addEventListener('click', function() {
+            document.getElementById('navMenu')?.classList.toggle('active');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedArtworks();
+        });
+    </script>
 </body>
 </html>
