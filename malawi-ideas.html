@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malawi Business Ideas Prototype</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .idea-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .idea-card:hover {
+            transform: translateY(-5px);
+        }
+        .idea-category {
+            display: inline-block;
+            background: #d4af37;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .idea-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+        .idea-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .idea-feasibility {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .feasibility-bar {
+            flex: 1;
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .feasibility-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #d4af37, #e8c84d);
+            border-radius: 4px;
+        }
+        .idea-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .vote-btn {
+            padding: 10px 20px;
+            border: 2px solid #d4af37;
+            background: transparent;
+            color: #d4af37;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .vote-btn:hover, .vote-btn.voted {
+            background: #d4af37;
+            color: white;
+        }
+        .vote-count {
+            font-weight: bold;
+            color: #d4af37;
+        }
+        .prototype-banner {
+            background: linear-gradient(135deg, #1a252f, #2c3e50);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .prototype-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .prototype-banner p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f5f5f0;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .filter-btn.active {
+            background: #d4af37;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Charles Levison</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="malawi-ideas.html" class="active">Malawi Ideas</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Prototype Banner -->
+    <div class="prototype-banner">
+        <div class="container">
+            <h1>🇲🇼 Malawi Business Ideas Prototype</h1>
+            <p>Vote on business ideas suitable for the local market • Based on your profile</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <!-- Filter -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterIdeas('all')">All Ideas</button>
+                <button class="filter-btn" onclick="filterIdeas('tech')">Tech</button>
+                <button class="filter-btn" onclick="filterIdeas('art')">Art & Creative</button>
+                <button class="filter-btn" onclick="filterIdeas('agriculture')">Agriculture</button>
+                <button class="filter-btn" onclick="filterIdeas('education')">Education</button>
+            </div>
+
+            <!-- Ideas Grid -->
+            <div id="ideasGrid">
+                <!-- Ideas loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Idea Section -->
+    <section class="section" style="background: #f9f9f9;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Submit Your Idea</h2>
+                <p class="section-subtitle">Have a business idea for Malawi? Share it!</p>
+            </div>
+            <form id="ideaForm" style="max-width: 600px; margin: 0 auto;">
+                <div class="form-group">
+                    <label>Your Idea</label>
+                    <textarea class="form-control" rows="4" placeholder="Describe your business idea for Malawi..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select class="form-control">
+                        <option>Tech & Innovation</option>
+                        <option>Art & Creative</option>
+                        <option>Agriculture</option>
+                        <option>Education</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Idea</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Charles Levison • Prototyping Ideas for Malawi</p>
+        </div>
+    </footer>
+
+    <script>
+        // Business Ideas for Malawi - Based on typical IdeaBrowser themes
+        const ideas = [
+            {
+                id: 1,
+                title: "Art E-commerce Platform",
+                category: "art",
+                description: "Online marketplace for Malawian artists to sell directly to collectors worldwide. Features include virtual exhibitions, secure payments, and shipping integration.",
+                feasibility: 85,
+                votes: 47,
+                tags: ["art", "e-commerce", "creative"]
+            },
+            {
+                id: 2,
+                title: "Mobile Art Classes",
+                category: "education",
+                description: "SMS-based art lessons for students in rural areas without internet. Weekly art tips and tutorial codes sent via WhatsApp.",
+                feasibility: 90,
+                votes: 62,
+                tags: ["education", "mobile", "art"]
+            },
+            {
+                id: 3,
+                title: "Fish Farming App",
+                category: "agriculture",
+                description: "Mobile app connecting fish farmers to markets, weather alerts, and best practices for pond management in Lake Malawi region.",
+                feasibility: 75,
+                votes: 34,
+                tags: ["agriculture", "tech", "fishing"]
+            },
+            {
+                id: 4,
+                title: "Local Art Supply Delivery",
+                category: "art",
+                description: "Business delivering art supplies (canvas, paints, brushes) to artists and schools across Malawi. Subscription model.",
+                feasibility: 80,
+                votes: 28,
+                tags: ["art", "business", "delivery"]
+            },
+            {
+                id: 5,
+                title: "Virtual Gallery Tours",
+                category: "tech",
+                description: "VR/360 tours of Malawian galleries and tourist attractions for international audiences. Revenue from tourism boards and hotels.",
+                feasibility: 70,
+                votes: 41,
+                tags: ["tech", "tourism", "VR"]
+            },
+            {
+                id: 6,
+                title: "Art Teacher Training Program",
+                category: "education",
+                description: "Training unemployed youth in art teaching skills. Graduates teach at rural schools while building portfolio.",
+                feasibility: 88,
+                votes: 53,
+                tags: ["education", "youth", "art"]
+            },
+            {
+                id: 7,
+                title: "Crop Price Alerts",
+                category: "agriculture",
+                description: "USSD-based service farmers can access to check current crop prices at major markets. Small subscription fee.",
+                feasibility: 92,
+                votes: 71,
+                tags: ["agriculture", "mobile", "markets"]
+            },
+            {
+                id: 8,
+                title: "Custom Portrait Service",
+                category: "art",
+                description: "Online service where people can order custom portraits of family photos. Popular for gifts and memorials.",
+                feasibility: 78,
+                votes: 39,
+                tags: ["art", "e-commerce", "custom"]
+            }
+        ];
+
+        // Render ideas
+        function renderIdeas(filter = 'all') {
+            const grid = document.getElementById('ideasGrid');
+            const filtered = filter === 'all' ? ideas : ideas.filter(i => i.category === filter);
+            
+            grid.innerHTML = filtered.map(idea => `
+                <div class="idea-card">
+                    <span class="idea-category">${idea.category}</span>
+                    <h3 class="idea-title">${idea.title}</h3>
+                    <p class="idea-description">${idea.description}</p>
+                    <div class="idea-feasibility">
+                        <span>Feasibility:</span>
+                        <div class="feasibility-bar">
+                            <div class="feasibility-fill" style="width: ${idea.feasibility}%"></div>
+                        </div>
+                        <span>${idea.feasibility}%</span>
+                    </div>
+                    <div class="idea-actions">
+                        <button class="vote-btn" onclick="vote(${idea.id})">
+                            👍 Like
+                        </button>
+                        <span class="vote-count">${idea.votes} votes</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Vote function
+        function vote(id) {
+            const idea = ideas.find(i => i.id === id);
+            if (idea) {
+                idea.votes++;
+                alert(`Thanks for voting for "${idea.title}"!`);
+                renderIdeas(document.querySelector('.filter-btn.active').textContent.toLowerCase());
+            }
+        }
+
+        // Filter
+        function filterIdeas(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderIdeas(category);
+        }
+
+        // Initialize
+        renderIdeas();
+    </script>
+</body>
+</html>
