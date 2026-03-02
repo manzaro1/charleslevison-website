@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Original Art | Charles Levison</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gumroad-section {
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        .gumroad-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .gumroad-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .gumroad-btn {
+            display: inline-block;
+            background: #ff4828;
+            color: white;
+            padding: 18px 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gumroad-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 72, 40, 0.4);
+        }
+        .products-section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #f5f5f0;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1a252f;
+        }
+        .product-price {
+            font-size: 1.3rem;
+            color: #d4af37;
+            font-weight: bold;
+        }
+        .product-desc {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Charles Levison</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="malawi-ideas.html">Ideas</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gumroad Hero -->
+    <section class="gumroad-section">
+        <div class="container">
+            <h1>🛒 Shop Original Art</h1>
+            <p>Purchase original paintings and digital downloads directly</p>
+            <a href="https://charleslevison.gumroad.com" target="_blank" class="gumroad-btn">
+                Visit My Gumroad Shop →
+            </a>
+        </div>
+    </section>
+
+    <!-- Products Preview -->
+    <section class="products-section">
+        <h2 style="text-align: center;">Featured Products</h2>
+        <p style="text-align: center; color: #666;">Click to purchase on Gumroad</p>
+        
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="images/artworks/new-piece-wildlife-center.jpg" alt="Original Painting" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Original Paintings</h3>
+                    <p class="product-desc">Hand-painted oil on canvas. Unique, one-of-a-kind artworks.</p>
+                    <div class="product-price">From $150</div>
+                    <a href="https://charleslevison.gumroad.com" target="_blank" class="btn btn-primary" style="margin-top: 15px; display: block;">View on Gumroad</a>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image" style="display: flex; align-items: center; justify-content: center; background: #f0f0f0;">
+                    <span style="font-size: 60px;">🖼️</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Digital Prints</h3>
+                    <p class="product-desc">High-resolution digital prints. Print at any size.</p>
+                    <div class="product-price">From $25</div>
+                    <a href="https://charleslevison.gumroad.com" target="_blank" class="btn btn-primary" style="margin-top: 15px; display: block;">View on Gumroad</a>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image" style="display: flex; align-items: center; justify-content: center; background: #f0f0f0;">
+                    <span style="font-size: 60px;">📚</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Art Tutorials</h3>
+                    <p class="product-desc">Learn painting techniques. Video courses & e-books.</p>
+                    <div class="product-price">From $20</div>
+                    <a href="https://charleslevison.gumroad.com" target="_blank" class="btn btn-primary" style="margin-top: 15px; display: block;">View on Gumroad</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section style="background: #f9f9f9; padding: 60px 20px;">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="text-align: center; margin-bottom: 40px;">How to Buy</h2>
+            
+            <div style="display: grid; gap: 20px;">
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background: #d4af37; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+                    <div>
+                        <h3>Browse</h3>
+                        <p>Click "Visit My Gumroad Shop" and explore available artworks</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background: #d4af37; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+                    <div>
+                        <h3>Choose</h3>
+                        <p>Select the artwork you love. Choose original or print.</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background: #d4af37; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+                    <div>
+                        <h3>Pay</h3>
+                        <p>Secure payment via card, PayPal, or mobile money</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background: #d4af37; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</div>
+                    <div>
+                        <h3>Receive</h3>
+                        <p>Digital downloads are instant. Originals ship to your door.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Charles Levison Art • <a href="https://charleslevison.gumroad.com" target="_blank" style="color: #d4af37;">Shop on Gumroad</a></p>
+        </div>
+    </footer>
+</body>
+</html>
